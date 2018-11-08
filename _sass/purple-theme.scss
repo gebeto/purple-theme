@@ -1,0 +1,194 @@
+@import "fonts";
+@import "rouge-github";
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #fff;
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  color:#727272;
+  font-weight:400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+  margin:0 0 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+h2 {
+  font-size: 16pt;
+}
+
+a {
+  color:#267CB9;
+  text-decoration:none;
+}
+
+
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  $width: 400px;
+  min-width: $width;
+  max-width: $width;
+  height: 100vh;
+  background-color: #46529d;
+  box-sizing: border-box;
+  padding: 50px;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+
+    .menu {
+      width: 32px;
+      height: 24px;
+      background-image: url('../img/menu.png');
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #ffffff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  &__bottom {
+    .user {
+      display: inline-block;
+      font-size: 13pt;
+      font-weight: bold;
+      color: #ffe118;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 40px;
+
+      &:before {
+        content: " ";
+        transition-duration: 1s;
+        position: absolute;
+        width: 30%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #ffe118;
+        left: 0;
+        bottom: 0;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+
+    .description {
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  max-height: 100%;
+
+  background-color: #f1f4ff;
+  
+  @for $h from 1 through 6 {
+    h#{$h} {
+      color: #46529d;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 40pt;
+    color: #192847;
+    // color: #ffffff;
+
+    // background-image: url('../img/mountains_1.jpg');
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__data {
+    // padding: 58px 180px;
+    // padding: 0px 180px 58px 180px;
+    padding: 0px 150px 50px 150px;
+    color: #4f567d;
+    
+    div.highlighter-rouge {
+      margin-bottom: 10px;
+      color: #000;
+
+      div.highlight {
+        // background-color: rgba(0,0,0,0.1);
+        background-color: #f5f7ff;
+        border: 1px solid #ccd7ff;
+        padding: 12px 12px 0px 12px;
+        max-width: 100%;
+        overflow-x: auto;
+        border-radius: 10px;
+
+        pre.highlight {
+          background-color: transparent;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}

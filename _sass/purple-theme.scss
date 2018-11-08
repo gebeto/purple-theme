@@ -176,14 +176,11 @@ a {
       color: #000;
 
       div.highlight {
-        margin-left: -150px;
-        margin-right: -150px;
-
         // background-color: rgba(0,0,0,0.1);
         background-color: #f5f7ff;
         // border-top: 1px solid #ccd7ff;
         // border-bottom: 1px solid #ccd7ff;
-        padding: 12px 150px 0px 150px;
+        padding: 12px 12px 0px 12px;
         max-width: 100%;
         overflow-x: auto;
 

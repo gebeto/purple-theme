@@ -197,3 +197,48 @@ a {
 img {
   max-width: 100%;
 }
+
+@media (max-width: 1000px) {
+  .sidebar {
+    $width: 300px;
+    min-width: $width;
+    max-width: $width;
+  }
+
+  .content {
+    &__data {
+      padding: 12px 30px 0px 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .sidebar {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 36px;
+  }
+
+  .sidebar__bottom {
+    display: none;
+  }
+
+  .content {
+    max-height: initial;
+  }
+
+  .content__data {
+    padding: none;
+  }
+}

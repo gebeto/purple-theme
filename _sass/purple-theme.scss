@@ -53,6 +53,7 @@ a {
   flex-direction: row;
   overflow: hidden;
   max-height: 100vh;
+  width: 100%;
 }
 
 .sidebar {
@@ -129,8 +130,9 @@ a {
 
 .content {
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 100%;
+  width: 100%;
 
   background-color: #f1f4ff;
   

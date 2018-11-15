@@ -33,9 +33,13 @@
           {{ content }}
         
           <h1>site.static_files</h1>
+          <ul>
           {% for sfile in site.static_files %}
-            {{ sfile.path }}
+            <li>
+              {{ sfile.path }}
+            </li>
           {% endfor %}
+          </ul>
         </div>
       </section>
     </div>

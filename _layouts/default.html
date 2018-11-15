@@ -16,14 +16,12 @@
     <div class="wrapper">
       <header class="sidebar">
         <div class="sidebar__top">
-          <div class="menu"></div>
-          <div class="title"><a href="{{ site.github.owner_url | default: '#' }}">{{site.github.owner_name | default: 'Gebeto'}}</a></div>
+          <a class="user" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
         </div>
 
         <!--h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1-->
         
         <div class="sidebar__bottom">
-          <span class="user">Slavik Nychkalo</span>
           <h1 class="description">{{ site.description | default: site.github.project_tagline }}</h1>
         </div>
       </header>
@@ -31,16 +29,6 @@
         <div class="content__header">Purple theme</div>
         <div class="content__data">
           {{ content }}
-        
-          <h1>site.static_files</h1>
-          <ul>
-          {% for sfile in site.static_files %}
-            <li>
-              {{ sfile.path }} : {{ sfile.basename }} :
-              {{ sfile | join: ', ' }}
-            </li>
-          {% endfor %}
-          </ul>
         </div>
       </section>
     </div>

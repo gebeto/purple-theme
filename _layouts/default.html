@@ -37,6 +37,15 @@
           {% for sfile in site.static_files %}
             <li>
               {{ sfile.path }}
+              {{ sfile }}
+            </li>
+          {% endfor %}
+          <h1>page.static_files</h1>
+          <ul>
+          {% for sfile in page.static_files %}
+            <li>
+              {{ sfile.path }}
+              {{ sfile }}
             </li>
           {% endfor %}
           </ul>
